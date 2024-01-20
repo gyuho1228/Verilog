@@ -1,4 +1,4 @@
-module 4bit_counter(
+module counter(
   input clk, rstn,
   output reg [3:0] out
 );
@@ -29,10 +29,10 @@ module tb;
     #300 $finish;
   end
   
-  4bit_counter u_4bit_counter(clk, rstn, out);
+  counter u_counter(clk, rstn, out);
   
   initial begin
-    $dumpfile("4bit_counter.vcd");
+    $dumpfile("counter.vcd");
     $dumpvars(0, tb);
   end            
   
